@@ -27,7 +27,8 @@ export default function Home() {
             <a href="#about">About</a>
           </li>
         </ul>
-        <a href="https://www.gmail.com/" className={styles.navCta}>  /*Change to actual eamil*/
+        {/* Change to actual email */}
+        <a href="https://www.gmail.com/" className={styles.navCta}>
           Hire me
         </a>
       </nav>
