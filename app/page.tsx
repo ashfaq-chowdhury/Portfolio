@@ -27,7 +27,7 @@ export default function Home() {
             <a href="#about">About</a>
           </li>
         </ul>
-        <a href="#" className={styles.navCta}>
+        <a href="https://www.gmail.com/" className={styles.navCta}>  //Change to actual eamil
           Hire me
         </a>
       </nav>
@@ -229,7 +229,7 @@ export default function Home() {
       </section>
 
       <footer className={styles.footer}>
-        <div>© 2026 Carlos Mendoza</div>
+        <div>© 2026 .....</div>
         <div className={styles.socialLinks}>
           <a href="#">Unity Play</a>
           <a href="https://www.linkedin.com/in/">LinkedIn</a>
