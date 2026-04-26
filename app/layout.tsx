@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "This is a Demo Title",
-  description: "Crafting digital experiences that feel effortless — from product strategy to pixel-perfect interfaces.",
+  description: "description.........",
 };
 
 export default function RootLayout({
