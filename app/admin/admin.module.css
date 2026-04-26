@@ -1,0 +1,305 @@
+.adminContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.adminHeader {
+  margin-bottom: 40px;
+}
+
+.adminHeader h1 {
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
+  color: #000;
+}
+
+.adminHeader p {
+  color: #666;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #eee;
+}
+
+.tabBtn {
+  padding: 15px 20px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #666;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.tabBtn:hover {
+  color: #000;
+}
+
+.tabBtn.active {
+  color: #000;
+  border-bottom-color: #000;
+}
+
+/* Headers and Buttons */
+.projectsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.projectsHeader h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.btnAdd {
+  padding: 10px 20px;
+  background: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btnAdd:hover {
+  background: #333;
+}
+
+/* Forms */
+.form {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border: 1px solid #eee;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #000;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.formGroup textarea {
+  resize: vertical;
+}
+
+.btnSubmit {
+  padding: 12px 30px;
+  background: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.btnSubmit:hover:not(:disabled) {
+  background: #333;
+}
+
+.btnSubmit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Messages */
+.error {
+  padding: 12px;
+  margin-bottom: 20px;
+  background: #fee;
+  color: #c33;
+  border-radius: 5px;
+  border-left: 4px solid #c33;
+}
+
+.success {
+  padding: 12px;
+  margin-bottom: 20px;
+  background: #efe;
+  color: #3c3;
+  border-radius: 5px;
+  border-left: 4px solid #3c3;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Projects Grid */
+.projectsList {
+  margin-top: 30px;
+}
+
+.noProjects {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  font-size: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.projectCard {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.projectCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.projectImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.projectContent {
+  padding: 20px;
+}
+
+.projectContent h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.3rem;
+}
+
+.projectContent p {
+  margin: 0 0 15px 0;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.projectLink {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.projectLink:hover {
+  color: #666;
+}
+
+.projectActions {
+  display: flex;
+  gap: 10px;
+  padding: 0 20px 20px 20px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.btnEdit,
+.btnDelete {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.btnEdit:hover {
+  background: #f0f0f0;
+  border-color: #000;
+}
+
+.btnDelete:hover {
+  background: #fee;
+  border-color: #c33;
+  color: #c33;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .adminContainer {
+    padding: 20px 15px;
+  }
+
+  .adminHeader h1 {
+    font-size: 1.8rem;
+  }
+
+  .projectsHeader {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tabBtn {
+    border-bottom: none;
+    border-left: 3px solid transparent;
+  }
+
+  .tabBtn.active {
+    border-bottom-color: transparent;
+    border-left-color: #000;
+  }
+}
