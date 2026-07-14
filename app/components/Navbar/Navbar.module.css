@@ -1,0 +1,63 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.navLinks {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.navLinks a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.navLinks a:hover {
+  color: var(--text);
+}
+
+.navCta {
+  background: var(--accent);
+  color: #0e0e0e;
+  padding: 0.55rem 1.4rem;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.1s, box-shadow 0.1s;
+  cursor: pointer;
+  box-shadow: 0 8px 0 #645309, 0 15px 20px rgba(0,0,0,0.4);
+}
+
+.navCta:hover {
+  transform: scale(1.2);
+}
+
+.navCta:active {
+  transform: translateY(6px);
+  box-shadow: 0 2px 0 #645309, 0 5px 10px rgba(0,0,0,0.4);
+}
