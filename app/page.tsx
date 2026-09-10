@@ -39,11 +39,30 @@ export default function Home() {
             With {new Date().getFullYear() - CAREER_START_YEAR}+ years in the industry,...
           </p>
           <p className={styles.aboutText}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut aliquid delectus officiis ab temporibus doloremque nemo recusandae itaque magnam corporis, illum perspiciatis assumenda dolorem inventore harum nulla voluptatibus magni.
+            I have a strong foundation in core CS theory and practical software development, combined with hands-on industry experience as a Web Development Intern.
           </p>
           <p className={styles.aboutText}>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime obcaecati quasi aliquid vero. Veritatis, dolor vel aperiam voluptates sunt repellat optio praesentium adipisci modi, animi recusandae fugiat quae velit qui?
           </p>
+        </div>
+      </section>
+
+      <section id="experience" className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>Experience</h2>
+        </div>
+        <div className={styles.experienceContent}>
+          <div className={styles.experienceItem}>
+            <div className={styles.experienceHeader}>
+              <h3 className={styles.experienceTitle}>Web Development Intern</h3>
+              <span className={styles.experienceDate}>Recent</span>
+            </div>
+            <div className={styles.experienceCompany}>Battery Low Interactive Ltd.</div>
+            <ul className={styles.experienceList}>
+              <li>Contributed to the design and development of web applications using <strong style={{ color: 'var(--text)' }}>React, Node.js, and PostgreSQL</strong> as part of a professional development team.</li>
+              <li>Gained applied experience translating requirements into working features — directly relevant to explaining real-world software development practices to students.</li>
+            </ul>
+          </div>
         </div>
       </section>
 
