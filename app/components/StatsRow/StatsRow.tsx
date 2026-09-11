@@ -11,7 +11,7 @@ export default function StatsRow({ stats }: StatsRowProps) {
       {stats.map((stat, index) => (
         <div key={index}>
           <div className={styles.statNum}>
-            {stat.value}<span className={styles.accent}>+</span>
+            {stat.value}
           </div>
           <div className={styles.statLabel}>{stat.label}</div>
         </div>

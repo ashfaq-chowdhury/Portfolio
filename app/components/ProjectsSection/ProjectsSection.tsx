@@ -6,30 +6,60 @@ import ProjectCard from './ProjectCard';
 import styles from './ProjectsSection.module.css';
 
 const initialProjects: Project[] = [
-  { id: 1, title: "Verde Studio Redesign", description: "A full rebrand for a sustainable architecture firm.", tag: "Branding · Web", emoji: "🌿", gradientClass: "p1" },
-  { id: 2, title: "Pulsar Dashboard", description: "Analytics platform for real-time data monitoring.", tag: "Product · SaaS", emoji: "🌐", gradientClass: "p2" },
-  { id: 3, title: "Hue Color System", description: "Mobile-first design tool for creative professionals.", tag: "App · iOS", emoji: "🎨", gradientClass: "p3" },
+  {
+    id: 1,
+    title: "Limitless — Full Stack Web App",
+    description: "A modern full-stack web application built with React, Node.js, and PostgreSQL. Features user authentication, real-time updates, and a clean component-based UI.",
+    tag: "React · Node.js · PostgreSQL",
+    emoji: "🏆",
+    gradientClass: "p1"
+  },
+  {
+    id: 2,
+    title: "University Portal",
+    description: "A role-based academic management system built with C#. Streamlines course workflows for students, faculty, and admins — including enrollment, grade management, and profile controls.",
+    tag: "C# · .NET",
+    emoji: "🎓",
+    gradientClass: "p2"
+  },
+  {
+    id: 3,
+    title: "Expense Tracker",
+    description: "A native Android expense tracking application built with Kotlin. Helps users log, categorize, and visualize their personal finances with an intuitive mobile-first UI.",
+    tag: "Kotlin · Android",
+    emoji: "📱",
+    gradientClass: "p3"
+  },
 ];
 
 const expandedProjects: Project[] = [
-  { id: 4, title: "Stellar App Platform", description: "Cloud-based project management for distributed teams.", tag: "Product · Web", emoji: "🚀", gradientClass: "p1" },
-  { id: 5, title: "Cinematic Brand Kit", description: "Video-first branding system for creative studios.", tag: "Branding · Motion", emoji: "🎬", gradientClass: "p2" },
-  { id: 6, title: "DataMind Analytics", description: "AI-powered insights platform for business intelligence.", tag: "Analytics · AI", emoji: "📊", gradientClass: "p3" },
+  {
+    id: 4,
+    title: "Best Thesis Project — AI/ML",
+    description: "Award-winning thesis project (Best Poster Award) exploring machine learning techniques. Presented at university level with outstanding faculty recognition.",
+    tag: "Python · Machine Learning",
+    emoji: "🤖",
+    gradientClass: "p1"
+  },
+  {
+    id: 5,
+    title: "Data Structures & Algorithms Library",
+    description: "A comprehensive C++ library implementing classic data structures and algorithm patterns, built during competitive programming practice sessions.",
+    tag: "C++ · DSA",
+    emoji: "⚙️",
+    gradientClass: "p2"
+  },
 ];
 
 export default function ProjectsSection() {
   const [isExpanded, setIsExpanded] = useState(false);
-
-  const toggleProjects = () => {
-    setIsExpanded(!isExpanded);
-  };
 
   return (
     <section id="work" className={styles.section}>
       <div className={styles.sectionHeader}>
         <h2 className={styles.sectionTitle}>Selected work</h2>
         <button
-          onClick={toggleProjects}
+          onClick={() => setIsExpanded(!isExpanded)}
           className={`${styles.sectionLink} ${isExpanded ? styles.sectionLinkActive : ''}`}
           style={{ background: 'none', border: 'none', padding: 0, font: 'inherit', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.3rem' }}
         >
@@ -41,7 +71,6 @@ export default function ProjectsSection() {
         {initialProjects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
-
         {isExpanded && expandedProjects.map((project, index) => (
           <ProjectCard
             key={project.id}

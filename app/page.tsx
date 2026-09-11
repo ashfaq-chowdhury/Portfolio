@@ -1,25 +1,23 @@
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import StatsRow from './components/StatsRow/StatsRow';
+import ExpertiseSection from './components/ExpertiseSection/ExpertiseSection';
 import ProjectsSection from './components/ProjectsSection/ProjectsSection';
 import SkillsSection from './components/SkillsSection/SkillsSection';
 import Footer from './components/Footer/Footer';
 import { Stat, SocialLink } from './types';
 import styles from './page.module.css';
 
-const CAREER_START_YEAR = 2010; // Change this to your start year
-
 const stats: Stat[] = [
-  { value: new Date().getFullYear() - CAREER_START_YEAR, label: "Years experience" },
-  { value: 48, label: "Projects delivered" },
-  { value: 32, label: "Happy clients" },
+  { value: 3.96, label: "CGPA" },
+  { value: 3, label: "Dean's List Awards" },
+  { value: 1, label: "Best Thesis Poster" },
 ];
 
 const socialLinks: SocialLink[] = [
-  { name: "Unity Play", url: "#" },
-  { name: "LinkedIn", url: "https://www.linkedin.com/in/" },
-  { name: "GitHub", url: "https://github.com/" },
-  { name: "Any Social", url: "#" },
+  { name: "Email", url: "mailto:ashfaq17407@gmail.com" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/ashfaqur-rahman-chowdhury-2931b8245" },
+  { name: "GitHub", url: "https://github.com/ashfaq-chowdhury" },
 ];
 
 export default function Home() {
@@ -35,14 +33,19 @@ export default function Home() {
         </div>
         <div className={styles.aboutContent}>
           <p className={styles.aboutText}>
-            I&apos;m a passionate designer and developer with a deep love for creating meaningful digital experiences.
-            With {new Date().getFullYear() - CAREER_START_YEAR}+ years in the industry,...
+            I&apos;m a recent B.Sc. graduate in Computer Science and Engineering from
+            American International University-Bangladesh (AIUB), where I maintained a
+            consistent Dean&apos;s List record and received the Best Thesis Poster Award.
           </p>
           <p className={styles.aboutText}>
-            I have a strong foundation in core CS theory and practical software development, combined with hands-on industry experience as a Web Development Intern.
+            I have a strong foundation in core CS theory and practical software development,
+            combined with hands-on industry experience as a Web Development Intern at
+            Battery Low Interactive Ltd., where I worked with React, Node.js, and PostgreSQL.
           </p>
           <p className={styles.aboutText}>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime obcaecati quasi aliquid vero. Veritatis, dolor vel aperiam voluptates sunt repellat optio praesentium adipisci modi, animi recusandae fugiat quae velit qui?
+            Fluent in Bengali and English, I have a genuine interest in teaching, mentoring,
+            and contributing to curriculum-driven, project-based CS education. I&apos;m passionate
+            about software development, AI/ML, and building impactful digital experiences.
           </p>
         </div>
       </section>
@@ -52,20 +55,40 @@ export default function Home() {
           <h2 className={styles.sectionTitle}>Experience</h2>
         </div>
         <div className={styles.experienceContent}>
+
           <div className={styles.experienceItem}>
             <div className={styles.experienceHeader}>
               <h3 className={styles.experienceTitle}>Web Development Intern</h3>
-              <span className={styles.experienceDate}>Recent</span>
+              <span className={styles.experienceDate}>2024</span>
             </div>
             <div className={styles.experienceCompany}>Battery Low Interactive Ltd.</div>
             <ul className={styles.experienceList}>
-              <li>Contributed to the design and development of web applications using <strong style={{ color: 'var(--text)' }}>React, Node.js, and PostgreSQL</strong> as part of a professional development team.</li>
-              <li>Gained applied experience translating requirements into working features — directly relevant to explaining real-world software development practices to students.</li>
+              <li>
+                Contributed to the design and development of web applications using{' '}
+                <strong style={{ color: 'var(--text)' }}>React, Node.js, and PostgreSQL</strong>{' '}
+                as part of a professional development team.
+              </li>
+              <li>
+                Translated product requirements into working features, collaborating closely
+                with senior developers in an agile workflow.
+              </li>
+              <li>
+                Gained applied experience with REST APIs, component-based architecture,
+                and database-driven UIs.
+              </li>
             </ul>
+            <div className={styles.experienceTechBadge}>
+              <span className={styles.badge}>React</span>
+              <span className={styles.badge}>Node.js</span>
+              <span className={styles.badge}>PostgreSQL</span>
+              <span className={styles.badge}>REST API</span>
+            </div>
           </div>
+
         </div>
       </section>
 
+      <ExpertiseSection />
       <ProjectsSection />
       <SkillsSection />
       <Footer socialLinks={socialLinks} />

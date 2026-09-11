@@ -23,6 +23,7 @@
   max-width: 1100px;
   margin: 0 auto;
   padding: 5rem 3rem;
+  border-top: 1px solid var(--border);
 }
 
 .sectionHeader {

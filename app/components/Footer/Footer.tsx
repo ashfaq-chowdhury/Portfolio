@@ -8,10 +8,17 @@ interface FooterProps {
 export default function Footer({ socialLinks }: FooterProps) {
   return (
     <footer className={styles.footer}>
-      <div>© 2026 .....</div>
+      <div>© {new Date().getFullYear()} Ashfaqur Rahman Chowdhury</div>
       <div className={styles.socialLinks}>
         {socialLinks.map((link, index) => (
-          <a key={index} href={link.url}>{link.name}</a>
+          <a
+            key={index}
+            href={link.url}
+            target={link.url.startsWith('mailto') ? undefined : '_blank'}
+            rel="noopener noreferrer"
+          >
+            {link.name}
+          </a>
         ))}
       </div>
     </footer>
