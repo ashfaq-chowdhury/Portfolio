@@ -6,7 +6,7 @@ const skills: Skill[] = [
   { icon: "⟨⟩", name: "Web Dev (React, Node.js, SQL)", level: "Intermediate", percentage: 80 },
   { icon: "✦", name: "Core CS (DSA, OOP, DBMS)", level: "Advanced", percentage: 92 },
   { icon: "◈", name: "Programming (C++, Java, JS)", level: "Advanced", percentage: 88 },
-  { icon: "🤖", name: "AI / Machine Learning", level: "Intermediate", percentage: 72 },
+  { icon: "🤖", name: "AI / Machine Learning", level: "Intermediate", percentage: 50 },
   { icon: "📱", name: "Android Dev (Kotlin)", level: "Beginner", percentage: 20 },
   { icon: "◎", name: "Teaching & Communication", level: "Expert", percentage: 95 },
   { icon: "🎨", name: "UI Design & Figma", level: "Beginner", percentage: 55 },
