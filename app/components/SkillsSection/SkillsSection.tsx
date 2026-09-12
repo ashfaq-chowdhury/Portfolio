@@ -8,7 +8,6 @@ const skills: Skill[] = [
   { icon: "◈", name: "Programming (C++, Java, JS)", level: "Advanced", percentage: 88 },
   { icon: "🤖", name: "AI / Machine Learning", level: "Intermediate", percentage: 50 },
   { icon: "📱", name: "Android Dev (Kotlin)", level: "Beginner", percentage: 20 },
-  { icon: "◎", name: "Teaching & Communication", level: "Expert", percentage: 95 },
   { icon: "🎨", name: "UI Design & Figma", level: "Beginner", percentage: 55 },
   { icon: "⚙️", name: "Git & Dev Tools", level: "Advanced", percentage: 85 },
 ];
