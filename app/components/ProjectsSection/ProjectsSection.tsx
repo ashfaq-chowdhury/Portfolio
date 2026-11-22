@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { Project } from '../../types';
 import ProjectCard from './ProjectCard';
 import styles from './ProjectsSection.module.css';
@@ -53,13 +53,6 @@ const expandedProjects: Project[] = [
 
 export default function ProjectsSection() {
   const [isExpanded, setIsExpanded] = useState(false);
-  const gridRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (isExpanded && gridRef.current) {
-      gridRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  }, [isExpanded]);
 
   return (
     <section id="work" className={styles.section}>
@@ -74,7 +67,7 @@ export default function ProjectsSection() {
           <span className={isExpanded ? styles.arrowRotate : ''}>→</span>
         </button>
       </div>
-      <div className={styles.projectsGrid} ref={gridRef}>
+      <div className={styles.projectsGrid}>
         {initialProjects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
