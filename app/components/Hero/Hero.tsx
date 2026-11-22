@@ -14,7 +14,7 @@ export default function Hero() {
             <span className={styles.hl}>M.Sc. in Computer Science</span> (Ongoing) · <span className={styles.hl}>B.Sc. in CSE</span>,
             CGPA <span className={styles.hl}>3.96/4.00</span><br />
             <span className={styles.hl}>Dean&apos;s List Awardee</span> · Researching{' '}
-            <span className={styles.hlUnderline}>self-supervised learning for financial time series</span>.
+            <span className={styles.hl}>Machine Learning · AI </span>
           </p>
           <div className={styles.heroActions}>
             <a href="#work" className={styles.btnPrimary}>
