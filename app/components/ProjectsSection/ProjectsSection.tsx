@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Project } from '../../types';
 import ProjectCard from './ProjectCard';
 import styles from './ProjectsSection.module.css';
@@ -36,8 +36,8 @@ const expandedProjects: Project[] = [
   {
     id: 4,
     title: "Best Thesis Project — AI/ML",
-    description: "Award-winning thesis project (Best Poster Award) exploring machine learning techniques. Presented at university level with outstanding faculty recognition.",
-    tag: "Python · Machine Learning",
+    description: "Self-Supervised Temporal Representation Learning for Anomaly Detection in Financial Time Series. Won the Best Undergraduate Thesis Poster Award in AI/ML in Finance; manuscript under revision for resubmission.",
+    tag: "Python · Self-Supervised Learning · Time Series",
     emoji: "🤖",
     gradientClass: "p1"
   },
@@ -53,6 +53,13 @@ const expandedProjects: Project[] = [
 
 export default function ProjectsSection() {
   const [isExpanded, setIsExpanded] = useState(false);
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isExpanded && gridRef.current) {
+      gridRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, [isExpanded]);
 
   return (
     <section id="work" className={styles.section}>
@@ -67,7 +74,7 @@ export default function ProjectsSection() {
           <span className={isExpanded ? styles.arrowRotate : ''}>→</span>
         </button>
       </div>
-      <div className={styles.projectsGrid}>
+      <div className={styles.projectsGrid} ref={gridRef}>
         {initialProjects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

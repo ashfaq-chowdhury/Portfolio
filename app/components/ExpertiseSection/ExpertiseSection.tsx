@@ -16,6 +16,7 @@ const expertise: ExpertiseItem[] = [
   { label: "Programming", sublabel: "C++ · Java · JS", percentage: 88, color: "#c8f04d" },
   { label: "AI / ML", sublabel: "Python · Scikit-learn", percentage: 72, color: "#c8f04d" },
   { label: "Android", sublabel: "Kotlin · Jetpack", percentage: 20, color: "#c8f04d" },
+  { label: "Research", sublabel: "SSL · Time-Series", percentage: 25, color: "#c8f04d" },
 ];
 
 interface CircleChartProps {

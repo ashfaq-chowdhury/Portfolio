@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Ashfaqur Rahman Chowdhury",
-  description: "Full Stack Web Developer",
+  description: "Full Stack Web Developer & ML Researcher — M.Sc. CS (AIUB)",
   icons: { icon: '/profile pic.png', },
 };
 

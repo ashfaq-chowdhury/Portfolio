@@ -78,7 +78,7 @@
 
 .projectCard {
   background: var(--surface);
-  padding: 2rem;
+  padding: 1.25rem;
   cursor: pointer;
   transition: background 0.2s;
   position: relative;
@@ -102,19 +102,19 @@
   font-size: 0.75rem;
   color: var(--muted);
   letter-spacing: 0.12em;
-  margin-bottom: 2rem;
+  margin-bottom: 0.75rem;
 }
 
 .projectImg {
   width: 100%;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/7;
   border-radius: 4px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   object-fit: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .p1 {
@@ -143,22 +143,22 @@
 
 .projectTitle {
   font-family: "Playfair Display", serif;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 0.5rem;
 }
 
 .projectDesc {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 .projectArrow {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 1rem;
+  right: 1rem;
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -171,4 +171,34 @@
   opacity: 0;
   transform: translate(4px, -4px);
   transition: opacity 0.2s, transform 0.2s;
+}
+
+@media (max-width: 900px) {
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.7rem;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  /* No hover on touch screens — always show the arrow */
+  .projectArrow {
+    opacity: 1;
+    transform: none;
+  }
 }

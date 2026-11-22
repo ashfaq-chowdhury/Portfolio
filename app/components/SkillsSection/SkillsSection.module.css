@@ -77,3 +77,35 @@
   border-radius: 1px;
   animation: fillBar 1.2s ease forwards;
 }
+
+@media (max-width: 900px) {
+  .skillsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.7rem;
+  }
+
+  .skillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skillItem {
+    padding: 1.25rem 1rem;
+  }
+
+  .skillName {
+    font-size: 0.82rem;
+  }
+}

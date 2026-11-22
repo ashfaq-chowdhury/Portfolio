@@ -128,3 +128,159 @@
   border-radius: 2rem;
   border: 1px solid rgba(200, 240, 77, 0.2);
 }
+/* Education timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid var(--border);
+  margin-left: 0.4rem;
+}
+
+.timelineItem {
+  position: relative;
+  padding: 0 0 2rem 2rem;
+}
+
+.timelineItem:last-child {
+  padding-bottom: 0;
+}
+
+.timelineItem::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 0.45rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.timelineTitle {
+  font-family: "Playfair Display", serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.timelineSub {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin: 0.25rem 0 0.75rem;
+}
+
+/* Awards */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.cardOrg {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.85;
+  margin: 0.6rem 0 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.cardText {
+  font-size: 0.95rem;
+  color: var(--text);
+  opacity: 0.85;
+  line-height: 1.65;
+}
+
+.certRow {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  align-items: center;
+}
+
+.certLabel {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.certText {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+@media (max-width: 640px) {
+  .experienceHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
+
+/* Certificates */
+.certCard {
+  display: block;
+}
+
+.certIcon {
+  margin-bottom: 1rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background: rgba(200, 240, 77, 0.08);
+  border: 1px solid rgba(200, 240, 77, 0.2);
+}
+
+/* Phone layout */
+@media (max-width: 600px) {
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.7rem;
+  }
+
+  .aboutText {
+    font-size: 0.95rem;
+  }
+
+  .experienceItem {
+    padding: 1.4rem;
+  }
+
+  .experienceTitle {
+    font-size: 1.2rem;
+  }
+
+  .experienceCompany {
+    font-size: 0.92rem;
+  }
+
+  .timelineItem {
+    padding-left: 1.4rem;
+  }
+
+  .timelineTitle {
+    font-size: 1.05rem;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

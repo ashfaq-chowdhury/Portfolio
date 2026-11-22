@@ -158,3 +158,41 @@
     padding: 3rem 1.5rem;
   }
 }
+
+@media (max-width: 480px) {
+  .heroName {
+    font-size: 2.8rem;
+  }
+
+  .heroDesc {
+    margin: 1.5rem 0 2rem;
+    font-size: 0.92rem;
+  }
+
+  .heroEyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+
+  .heroActions {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .heroImage {
+    height: 260px;
+  }
+}
+
+/* Highlighted phrases in hero description */
+.hl {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.hlUnderline {
+  color: var(--text);
+  font-weight: 400;
+  background: linear-gradient(transparent 62%, rgba(200, 240, 77, 0.28) 62%);
+  padding: 0 2px;
+}

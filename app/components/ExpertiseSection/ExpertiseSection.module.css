@@ -111,3 +111,17 @@
   line-height: 1.4;
   letter-spacing: 0.04em;
 }
+
+@media (max-width: 600px) {
+  .sectionHeader {
+    margin-bottom: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.7rem;
+  }
+
+  .chartsGrid {
+    gap: 1rem;
+  }
+}

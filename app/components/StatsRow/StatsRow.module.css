@@ -25,3 +25,19 @@
   color: var(--muted);
   letter-spacing: 0.05em;
 }
+
+@media (max-width: 600px) {
+  .statsRow {
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+    justify-content: space-between;
+  }
+
+  .statNum {
+    font-size: 2rem;
+  }
+
+  .statLabel {
+    font-size: 0.72rem;
+  }
+}
